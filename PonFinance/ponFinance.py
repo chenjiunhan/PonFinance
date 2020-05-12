@@ -48,13 +48,11 @@ class PonFinance():
 
         if category == "market":
             for market in self.markets:
-                time.sleep(10 + np.random.rand()*3)
+                time.sleep(3 + np.random.rand()*3)
                 self.get_csv(market, category)
         elif category == "share":
             for TW_id in self.TW_ids:
-                if TW_id < 3665:
-                    continue
-                time.sleep(1 + np.random.rand()*3)
+                time.sleep(3 + np.random.rand()*3)
                 self.get_csv(str(TW_id) + ".TW", category)
         else:
             print("No such category")
